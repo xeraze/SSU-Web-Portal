@@ -3,186 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна — Служба безпеки України</title>
+    <title>СБУ — Подати заявку</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         :root {
-            --bg-color: #0d0d0d;
-            --text-color: #ffffff;
-            --accent-color: #005bbb;
-            --accent-hover: #ffd500;
-            --gray-color: #333333;
+            --bg-dark: #000000;
+            --accent-orange: #f08c00;
+            --text-white: #ffffff;
+            --text-gray: #888888;
+            --text-dark-gray: #555555;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.03) 75%, transparent 75%, transparent 100%);
+            background-size: 100vw 100vh;
+            background-attachment: fixed;
         }
 
         .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(13, 13, 13, 0.95);
-            border-bottom: 1px solid var(--gray-color);
-            z-index: 1000;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: var(--bg-dark);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--text-color);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .logo span {
-            color: var(--accent-color);
-        }
-
-        .nav-menu {
             display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        .nav-menu li a {
-            color: var(--text-color);
+            align-items: center;
+            gap: 10px;
+            color: var(--text-white);
             text-decoration: none;
+            font-weight: 900;
             font-size: 16px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-menu li a:hover {
-            color: var(--accent-color);
-        }
-
-        .btn-primary {
-            background-color: var(--accent-color);
-            color: #fff;
-            padding: 10px 24px;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
             text-transform: uppercase;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            line-height: 1.1;
         }
 
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-            color: #000;
+        .logo-icon {
+            color: var(--accent-orange);
+            font-size: 24px;
+            letter-spacing: -2px;
         }
 
-        .hamburger {
-            display: none;
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--accent-orange);
+            color: var(--accent-orange);
+            background: transparent;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
             cursor: pointer;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--text-color);
             transition: 0.3s;
         }
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080/1a1a1a/333333?text=SBU+Background') no-repeat center center/cover;
-            margin-top: 80px;
+        .btn-outline:hover {
+            background: var(--accent-orange);
+            color: var(--bg-dark);
         }
 
-        .hero h1 {
-            font-size: 4rem;
+        .burger {
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .burger span {
+            display: block;
+            height: 2px;
+            background-color: var(--text-white);
+        }
+        .burger span:nth-child(2) { width: 70%; float: right; align-self: flex-end; }
+
+        .hero {
+            margin-top: 80px;
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-transform: uppercase;
+        }
+
+        .word-cloud {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 600px;
+            line-height: 1.1;
+        }
+
+        .w-small { font-size: 12px; color: var(--text-dark-gray); font-weight: 700; }
+        .w-medium { font-size: 16px; color: var(--text-gray); font-weight: 700; }
+        .w-large { font-size: 24px; color: var(--text-white); font-weight: 900; }
+        .w-xl { font-size: 42px; color: var(--accent-orange); font-weight: 900; line-height: 1; margin: 10px 0; }
+
+        .flex-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-main {
+            background-color: var(--accent-orange);
+            color: var(--bg-dark);
+            border: none;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 400px;
+            justify-content: center;
+            clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+            transition: opacity 0.3s;
+        }
+
+        .btn-main:hover {
+            opacity: 0.9;
+        }
+
+        .about-section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            color: var(--accent-orange);
+            font-size: 32px;
             font-weight: 900;
             text-transform: uppercase;
             margin-bottom: 20px;
-            letter-spacing: 2px;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
-            color: #cccccc;
+        .about-text {
+            color: var(--text-white);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
-        @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                flex-direction: column;
-                background-color: var(--bg-color);
-                width: 100%;
-                text-align: center;
-                transition: 0.3s;
-                padding: 40px 0;
-                border-bottom: 1px solid var(--gray-color);
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .nav-menu li {
-                margin: 15px 0;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
+        @media (min-width: 768px) {
+            .w-xl { font-size: 64px; }
+            .w-large { font-size: 32px; }
+            .about-title { font-size: 48px; }
+            .btn-main { font-size: 24px; padding: 25px 50px; }
         }
     </style>
 </head>
 <body>
 
     <header class="header">
-        <div class="container">
-            <a href="#" class="logo"><span>СБУ</span> Портал</a>
-            
-            <ul class="nav-menu">
-                <li><a href="#">Головна</a></li>
-                <li><a href="#">Про структуру</a></li>
-                <li><a href="#">Вакансії</a></li>
-                <li><a href="#">Контакти</a></li>
-            </ul>
-
-            <button class="btn-primary">Подати заявку</button>
-
-            <div class="hamburger">
+        <a href="#" class="logo">
+            <span class="logo-icon">///</span>
+            <span>Служба Безпеки<br>України</span>
+        </a>
+        <div class="header-actions">
+            <button class="btn-outline">Подати заявку</button>
+            <div class="burger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -192,28 +206,61 @@
 
     <main>
         <section class="hero">
-            <div>
-                <h1>Захищай країну<br>з найкращими</h1>
-                <p>Офіційний портал рекрутингу Служби безпеки України. Приєднуйся до команди професіоналів. Набір до бойових та оперативних підрозділів триває.</p>
-                <button class="btn-primary" style="padding: 15px 40px; font-size: 18px;">Обрати вакансію</button>
+            <div class="word-cloud">
+                <div class="flex-row">
+                    <span class="w-small">Сучасне оснащення</span>
+                    <span class="w-small">Новий рівень підготовки</span>
+                </div>
+                <div class="flex-row">
+                    <span class="w-large">КОМАНДИРИ З ОКОПІВ</span>
+                    <span class="w-small">Бережемо життя</span>
+                </div>
+                <div class="flex-row">
+                    <span class="w-small">Своя лікарня</span>
+                    <span class="w-medium">ВЛАСНЕ ППО</span>
+                </div>
+                <div class="flex-row">
+                    <span class="w-large">ПРОФЕСІЙНИЙ РЕЗЕРВ</span>
+                    <span class="w-small">Піклуємось після служби</span>
+                </div>
+                <div class="flex-row">
+                    <span class="w-small">Людяне ставлення</span>
+                    <span class="w-medium">ПОСТІЙНО НАВЧАЄМОСЬ</span>
+                </div>
+                
+                <div class="w-xl">ЗРОБЛЕНО<br>ДЛЯ ТЕБЕ</div>
+
+                <div class="w-medium">ЦІНУЄМО ЗАСЛУГИ, А НЕ ПОГОНИ</div>
+                <div class="flex-row">
+                    <span class="w-small">Постійно навчаємось</span>
+                    <span class="w-medium">ЛЮДЯНІ КОМАНДИРИ</span>
+                </div>
+                <div class="flex-row">
+                    <span class="w-large">ВСІХ ЗАБЕЗПЕЧУЄМО</span>
+                    <span class="w-small">Будуємо дороги</span>
+                </div>
+                <div class="flex-row">
+                    <span class="w-small">Бережемо життя</span>
+                    <span class="w-medium">ПІКЛУЄМОСЬ ПІСЛЯ СЛУЖБИ</span>
+                </div>
             </div>
+
+            <button class="btn-main">
+                Подати заявку 
+                <span style="font-weight: 400;">&#8599;</span>
+            </button>
+        </section>
+
+        <section class="about-section">
+            <h2 class="about-title">Про структуру</h2>
+            <p class="about-text">
+                Служба безпеки України — державний правоохоронний орган спеціального призначення, який забезпечує державну безпеку України. Ми формуємо нові підрозділи на базі унікального бойового досвіду.
+            </p>
+            <p class="about-text">
+                За плечима наших співробітників — успішні спецоперації, рекорди на полі бою та щоденна робота заради перемоги.
+            </p>
         </section>
     </main>
 
-    <script>
-
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
-
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        });
-
-        document.querySelectorAll(".nav-menu li a").forEach(n => n.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }));
-    </script>
 </body>
 </html>
