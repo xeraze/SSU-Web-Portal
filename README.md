@@ -1,1 +1,0 @@
-# NPU-Web-Portal-Kherson-Ukraine
