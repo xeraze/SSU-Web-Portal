@@ -92,6 +92,7 @@
       padding: 7px 15px;
       margin-right: 8px;
       font-size: 15px;
+      cursor: pointer;
     }
     .menu-btn {
       font-size: 18px;
@@ -379,7 +380,7 @@
       color: #fff;
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
       min-height: 120px;
       box-sizing: border-box;
       box-shadow: 0 2px 17px rgba(0,0,0,0.13);
@@ -526,27 +527,26 @@
       .steps-row { grid-template-columns: 1fr; }
     }
 
-input[type="text"], input[type="tel"] {
-  background: #20201c;
-  color: #fff;
-  font-size: 1em;
-  border-radius: 6px;
-  border: none;
-  padding: 14px 14px;
-  margin-bottom: 10px;
-  outline: none;
-  width: 100%; 
-  box-sizing: border-box;
-}
-input[type="radio"], input[type="checkbox"] { accent-color: var(--main-accent); }
-button[type="submit"] { 
-  transition: background 0.15s;
-}
-button[type="submit"]:hover { background: var(--main-accent-hover);}
-a { color: var(--main-accent);}
+    input[type="text"], input[type="tel"] {
+      background: #20201c;
+      color: #fff;
+      font-size: 1em;
+      border-radius: 6px;
+      border: none;
+      padding: 14px 14px;
+      margin-bottom: 10px;
+      outline: none;
+      width: 100%; 
+      box-sizing: border-box;
+    }
+    input[type="radio"], input[type="checkbox"] { accent-color: var(--main-accent); }
+    button[type="submit"] { 
+      transition: background 0.15s;
+    }
+    button[type="submit"]:hover { background: var(--main-accent-hover);}
+    a { color: var(--main-accent);}
       
   </style>
-  <!-- Иконки можно заменить на SVG по желанию -->
 </head>
 <body>
   <div class="topbar">
@@ -585,7 +585,7 @@ a { color: var(--main-accent);}
 
     <div class="about-card">
       <h2>ПРО СБУ</h2>
-      <p>Служба безпеки України — державна спеціальна служба, яка відповідальна за захист національної безпеки, боротьбу з тероризмом та забезпечення державного суверенітету України.</p>
+      <p>Служба безпеки України — державна спеціальна служба, яка відповідальна за захист національної безпеки, суверенітету та територіальної цілісності України.</p>
       <button class="detail-btn">Детальніше</button>
     </div>
 
@@ -600,25 +600,25 @@ a { color: var(--main-accent);}
     <div class="choose-row">
       <div class="choose-card">
         <strong>🛡 ХОЧУ СЛУЖИТИ</strong>
-        <div class="choose-desc">Виконуй завдання з безпеки, розкривай злочини, сприяй захисту держави та громадян. Сучасна техніка, спеціалізовані підрозділи, відповідальна робота.</div>
+        <div class="choose-desc">Виконуй завдання з безпеки, розкривай злочини, сприяй захисту держави та громадян. Сучасна підготовка та кар'єра.</div>
         <button class="choose-btn">БОЙОВІ ПОСАДИ</button>
       </div>
       <div class="choose-card">
         <strong>🔧 ХОЧУ ПРАЦЮВАТИ</strong>
-        <div class="choose-desc">Реалізуй сильні сторони в ІТ, юриспруденції, аналітиці, медицині чи логістиці для підтримки ефективної роботи підрозділів СБУ.</div>
+        <div class="choose-desc">Реалізуй сильні сторони в ІТ, юриспруденції, аналітиці, медицині чи логістиці для підтримки важливих операцій.</div>
         <button class="choose-btn">ТИЛОВІ ПОСАДИ</button>
       </div>
     </div>
     <div class="choose-row">
       <div class="choose-card" style="flex:2;">
         <strong>🎓 ХОЧУ НАВЧАТИСЯ</strong>
-        <div class="choose-desc">Отримай сучасну освіту та навички, стажуйся в спеціалізованих академіях безпеки для цивільних та військових.</div>
+        <div class="choose-desc">Отримай сучасну освіту та навички, стажуйся в спеціалізованих академіях безпеки для цивільних та військовослужбовців.</div>
         <button class="choose-btn">УСІ КУРСИ</button>
       </div>
     </div>
 
     <div class="find-title">ЗНАЙДИ СЕБЕ В СБУ</div>
-    <div class="find-desc">Служба безпеки України — місце, де кожен може знайти своє покликання та напрямок професійного та особистого розвитку.</div>
+    <div class="find-desc">Служба безпеки України — місце, де кожен може знайти своє покликання та напрямок професійного розвитку.</div>
     <div class="find-list">
       <div class="find-card">
         <div class="find-label">З ДРУГОЇ СЛУЖБИ В СБУ</div>
@@ -697,17 +697,17 @@ a { color: var(--main-accent);}
       <div class="step-card">
         <div class="step-num">01</div>
         <div class="step-title">ЗНАЙОМСТВО</div>
-        <div class="step-desc">Вступний тиждень, ознайомчі заняття, знайомство з підрозділами та принципами роботи. Все для правильного вибору напрямку!</div>
+        <div class="step-desc">Вступний тиждень, ознайомчі заняття, знайомство з підрозділами та принципами роботи.</div>
       </div>
       <div class="step-card">
         <div class="step-num">02</div>
         <div class="step-title">ЗАЯВКА</div>
-        <div class="step-desc">Подай заявку на сайті, отримай консультацію і всю необхідну інформацію від наших координаторів.</div>
+        <div class="step-desc">Подай заявку на сайті, отримай консультацію і всю необхідну інформацію від координаторів.</div>
       </div>
       <div class="step-card">
         <div class="step-num">03</div>
         <div class="step-title">ПЕРЕВІРКА</div>
-        <div class="step-desc">Перевірка навичок, стану здоров’я і відповідності вимогам конкретної посади.</div>
+        <div class="step-desc">Перевірка навичок, стану здоров'я і відповідності вимогам конкретної посади.</div>
       </div>
       <div class="step-card">
         <div class="step-num">04</div>
@@ -720,79 +720,80 @@ a { color: var(--main-accent);}
       <img class="biglogo" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Emblem_of_the_Security_Service_of_Ukraine.svg" alt="SBU big logo">
     </div>
 
-<div class="join-title" style="color:var(--main-accent);font-weight:bold;margin:38px 0 16px 0;font-size:1.16em;letter-spacing:1px;">
-  ПРИЄДНУЙСЯ
-</div>
-<div class="join-form-card" style="background:#0f120e;border-radius:18px;padding:34px 16px 28px 16px;max-width:650px;margin:0 auto 42px auto;">
-  <img style="display:block;margin:0 auto 18px auto;width:120px;" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Emblem_of_the_Security_Service_of_Ukraine.svg" alt="SBU Лого">
-  <form>
-    <label for="surname" style="display:block;font-size:1em;margin-bottom:6px;">Прізвище*</label>
-    <input id="surname" type="text" placeholder="Прізвище" style="width:100%;background:#222;border:none;color:#fff;padding:12px 12px;border-radius:6px;margin-bottom:18px;">
-    <label for="name" style="display:block;font-size:1em;margin-bottom:6px;">Ім'я*</label>
-    <input id="name" type="text" placeholder="Ім'я" style="width:100%;background:#222;border:none;color:#fff;padding:12px 12px;border-radius:6px;margin-bottom:18px;">
-    <label for="patronymic" style="display:block;font-size:1em;margin-bottom:6px;">По батькові</label>
-    <input id="patronymic" type="text" placeholder="По батькові" style="width:100%;background:#222;border:none;color:#fff;padding:12px 12px;border-radius:6px;margin-bottom:18px;">
-    <label for="phone" style="display:block;font-size:1em;margin-bottom:6px;">Номер телефону*</label>
-    <input id="phone" type="tel" placeholder="+38 (___) ___-__-__" style="width:100%;background:#222;border:none;color:#fff;padding:12px 12px;border-radius:6px;margin-bottom:18px;">
-    <label for="telegram" style="display:block;font-size:1em;margin-bottom:6px;">Нік в Telegram</label>
-    <input id="telegram" type="text" placeholder="Нік в Telegram" style="width:100%;background:#222;border:none;color:#fff;padding:12px 12px;border-radius:6px;margin-bottom:18px;">
-    <div style="margin-bottom:15px;">
-      <div style="margin-bottom:7px;font-size:1em;">Чи є військовослужбовцем на даний момент?</div>
-      <label style="margin-right:16px;">
-        <input type="radio" name="army" checked> Так
-      </label>
-      <label>
-        <input type="radio" name="army"> Ні
-      </label>
+    <div class="join-title" style="color:var(--main-accent);font-weight:bold;margin:38px 0 16px 0;font-size:1.16em;letter-spacing:1px;">
+      ПРИЄДНУЙСЯ
     </div>
-    <div style="margin-bottom:16px;">
-      <label style="font-size: 0.96em;">
-        <input type="checkbox" checked style="accent-color:var(--main-accent);">
-        Я погоджуюсь з <a href="#" style="color:var(--main-accent);text-decoration:underline;">Політикою конфіденційності</a> та підтверджую, що мені від 18 до 58 років*
-      </label>
+    <div class="join-form-card" style="background:#0f120e;border-radius:18px;padding:34px 16px 28px 16px;max-width:650px;margin:0 auto 42px auto;">
+      <img style="display:block;margin:0 auto 18px auto;width:120px;" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Emblem_of_the_Security_Service_of_Ukraine.svg" alt="SBU Лого">
+      <form>
+        <label for="surname" style="display:block;font-size:1em;margin-bottom:6px;">Прізвище*</label>
+        <input id="surname" type="text" placeholder="Прізвище" style="width:100%;background:#222;border:none;color:#fff;padding:12px 12px;border-radius:6px;margin-bottom:18px;">
+        <label for="name" style="display:block;font-size:1em;margin-bottom:6px;">Ім'я*</label>
+        <input id="name" type="text" placeholder="Ім'я" style="width:100%;background:#222;border:none;color:#fff;padding:12px 12px;border-radius:6px;margin-bottom:18px;">
+        <label for="patronymic" style="display:block;font-size:1em;margin-bottom:6px;">По батькові</label>
+        <input id="patronymic" type="text" placeholder="По батькові" style="width:100%;background:#222;border:none;color:#fff;padding:12px 12px;border-radius:6px;margin-bottom:18px;">
+        <label for="phone" style="display:block;font-size:1em;margin-bottom:6px;">Номер телефону*</label>
+        <input id="phone" type="tel" placeholder="+38 (___) ___-__-__" style="width:100%;background:#222;border:none;color:#fff;padding:12px 12px;border-radius:6px;margin-bottom:18px;">
+        <label for="telegram" style="display:block;font-size:1em;margin-bottom:6px;">Нік в Telegram</label>
+        <input id="telegram" type="text" placeholder="Нік в Telegram" style="width:100%;background:#222;border:none;color:#fff;padding:12px 12px;border-radius:6px;margin-bottom:18px;">
+        <div style="margin-bottom:15px;">
+          <div style="margin-bottom:7px;font-size:1em;">Чи є військовослужбовцем на даний момент?</div>
+          <label style="margin-right:16px;">
+            <input type="radio" name="army" checked> Так
+          </label>
+          <label>
+            <input type="radio" name="army"> Ні
+          </label>
+        </div>
+        <div style="margin-bottom:16px;">
+          <label style="font-size: 0.96em;">
+            <input type="checkbox" checked style="accent-color:var(--main-accent);">
+            Я погоджуюсь з <a href="#" style="color:var(--main-accent);text-decoration:underline;">Політикою конфіденційності</a> та підтверджую, що мені більше 18 років.
+          </label>
+        </div>
+        <button type="submit" style="width:100%;background:var(--main-accent);color:var(--main-black);font-size:1.09em;font-weight:bold;border:none;border-radius:8px;padding:18px 0;cursor:pointer;">ПОДАТИ ЗАЯВКУ</button>
+      </form>
     </div>
-    <button type="submit" style="width:100%;background:var(--main-accent);color:var(--main-black);font-size:1.09em;font-weight:bold;border:none;border-radius:8px;padding:18px 0;cursor:pointer;">ПОДАТИ ЗАЯВКУ &rarr;</button>
-  </form>
-</div>
 
-<footer style="background:#0c0d0b;padding:30px 0 18px 0;margin-top:40px;">
-  <div class="footer-wrap" style="max-width:650px;margin:0 auto;">
-    <div style="display: flex; align-items: center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Emblem_of_the_Security_Service_of_Ukraine.svg" style="height:34px;margin-right:10px;" alt="Лого СБУ">
-      <span style="color:var(--main-accent);font-size:20px;font-weight:bold;">СЛУЖБА БЕЗПЕКИ УКРАЇНИ</span>
-    </div>
-    <div style="margin:14px 0;">
-      <a href="#" style="color:#fff;margin-right:10px;"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="24" style="vertical-align:middle"></a>
-      <a href="#" style="color:#fff;margin-right:10px;"><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Instagram_logo_2022.svg" width="24" style="vertical-align:middle"></a>
-      <a href="#" style="color:#fff;margin-right:10px;"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="24" style="vertical-align:middle"></a>
-      <a href="#" style="color:#fff;"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Tiktok_logo.svg" width="24" style="vertical-align:middle"></a>
-    </div>
-    <div style="display: flex;flex-wrap:wrap;justify-content: space-between;margin:18px 0 0 0;">
-      <div style="min-width:160px;">
-        <div style="color:#fff;font-weight:bold;margin-bottom:12px;">ГОЛОВНА</div>
-        <div style="color:#fff">Про СБУ</div>
-        <div style="color:#fff">Вакансії</div>
-        <div style="color:#fff">FAQ</div>
-        <div style="color:#fff">Для іноземців</div>
-        <div style="color:#fff">Навчання</div>
-        <div style="color:#fff">Патронатна служба</div>
+    <footer style="background:#0c0d0b;padding:30px 0 18px 0;margin-top:40px;">
+      <div class="footer-wrap" style="max-width:650px;margin:0 auto;">
+        <div style="display: flex; align-items: center;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Emblem_of_the_Security_Service_of_Ukraine.svg" style="height:34px;margin-right:10px;" alt="Лого СБУ">
+          <span style="color:var(--main-accent);font-size:20px;font-weight:bold;">СЛУЖБА БЕЗПЕКИ УКРАЇНИ</span>
+        </div>
+        <div style="margin:14px 0;">
+          <a href="#" style="color:#fff;margin-right:10px;"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="24" style="vertical-align:middle" alt="Facebook"></a>
+          <a href="#" style="color:#fff;margin-right:10px;"><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Instagram_logo_2022.svg" width="24" style="vertical-align:middle" alt="Instagram"></a>
+          <a href="#" style="color:#fff;margin-right:10px;"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="24" style="vertical-align:middle" alt="Telegram"></a>
+          <a href="#" style="color:#fff;"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Tiktok_logo.svg" width="24" style="vertical-align:middle" alt="TikTok"></a>
+        </div>
+        <div style="display: flex;flex-wrap:wrap;justify-content: space-between;margin:18px 0 0 0;">
+          <div style="min-width:160px;">
+            <div style="color:#fff;font-weight:bold;margin-bottom:12px;">ГОЛОВНА</div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">Про СБУ</a></div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">Вакансії</a></div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">FAQ</a></div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">Для іноземців</a></div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">Навчання</a></div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">Патронатна служба</a></div>
+          </div>
+          <div style="min-width:160px;">
+            <div style="color:#fff;font-weight:bold;margin-bottom:12px;">ІНФОРМАЦІЯ</div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">Благодійний фонд</a></div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">Тест-драйв технічна розвідка</a></div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">Тестовий тиждень розвідка</a></div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">Тестовий тиждень артилерія</a></div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">Контакти</a></div>
+            <div style="color:#fff"><a href="#" style="color:inherit;text-decoration:none;">Блог</a></div>
+          </div>
+        </div>
+        <div style="color:#636363;margin-top:25px;font-size:13px;">
+          sbu.gov.ua © 2026 <br>
+          Cookie policy &nbsp; | &nbsp; Політика конфіденційності
+        </div>
       </div>
-      <div style="min-width:160px;">
-        <div style="color:#fff;font-weight:bold;margin-bottom:12px;">ІНФОРМАЦІЯ</div>
-        <div style="color:#fff">Благодійний фонд</div>
-        <div style="color:#fff">Тест-драйв технічна розвідка</div>
-        <div style="color:#fff">Тестовий тиждень розвідка</div>
-        <div style="color:#fff">Тестовий тиждень артилерія</div>
-        <div style="color:#fff">Контакти</div>
-        <div style="color:#fff">Блог</div>
-      </div>
-    </div>
-    <div style="color:#636363;margin-top:25px;font-size:13px;">
-      sbu.gov.ua © 2026 <br>
-      Cookie policy &nbsp; | &nbsp; Політика конфіденційності
-    </div>
+    </footer>
+
   </div>
-</footer>
-      
 </body>
 </html>
