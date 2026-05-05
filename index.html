@@ -3,264 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>СБУ — Подати заявку</title>
+    <title>СБУ | Веб-Портал</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
-
         :root {
-            --bg-dark: #000000;
+            --bg-black: #000000;
             --accent-orange: #f08c00;
             --text-white: #ffffff;
-            --text-gray: #888888;
-            --text-dark-gray: #555555;
+            --card-gray: #111111;
+            --border-gray: #222222;
         }
 
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            overflow-x: hidden;
-            background-image: 
-                linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.03) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.03) 75%, transparent 75%, transparent 100%);
-            background-size: 100vw 100vh;
-            background-attachment: fixed;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { background-color: var(--bg-black); color: var(--text-white); scroll-behavior: smooth; overflow-x: hidden; }
 
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            background-color: var(--bg-dark);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(0,0,0,0.95); padding: 15px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid var(--border-gray);
+        }
+        .logo { font-weight: 900; text-transform: uppercase; line-height: 1.1; font-size: 20px; text-decoration: none; color: white; }
+        .logo span { color: var(--accent-orange); }
+
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .apply-btn-top {
+            border: 1px solid var(--accent-orange); color: var(--accent-orange);
+            padding: 8px 16px; font-weight: 700; font-size: 12px; cursor: pointer; background: none;
+            text-transform: uppercase; transition: 0.3s;
+        }
+        .apply-btn-top:hover { background: var(--accent-orange); color: black; }
+
+        .burger { cursor: pointer; display: flex; flex-direction: column; gap: 6px; width: 25px; }
+        .burger div { height: 2px; width: 100%; background: white; transition: 0.3s; }
+
+        .overlay-menu {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg-black); z-index: 2000; display: none;
+            flex-direction: column; justify-content: center; align-items: flex-start; padding: 10%;
+        }
+        .overlay-menu.active { display: flex; }
+        .overlay-menu a {
+            font-size: 45px; font-weight: 900; text-transform: uppercase;
+            color: white; text-decoration: none; margin: 10px 0; transition: 0.3s;
+        }
+        .overlay-menu a:hover { color: var(--accent-orange); transform: translateX(20px); }
+        .close-btn { position: absolute; top: 30px; right: 5%; font-size: 50px; cursor: pointer; }
+
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; }
+        .word-cloud { font-weight: 700; text-transform: uppercase; opacity: 0.6; font-size: 14px; letter-spacing: 2px; }
+        .main-title { font-size: clamp(40px, 10vw, 100px); font-weight: 900; line-height: 0.9; margin: 20px 0; color: var(--accent-orange); }
+        .hero-btn {
+            background: var(--accent-orange); color: black; padding: 20px 45px;
+            font-weight: 900; text-transform: uppercase; text-decoration: none; font-size: 18px;
+            clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+            display: inline-block; margin-top: 30px;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-white);
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 16px;
-            text-transform: uppercase;
-            line-height: 1.1;
-        }
+        section { padding: 100px 5%; max-width: 1400px; margin: 0 auto; }
+        .section-header { margin-bottom: 50px; }
+        .section-header h2 { font-size: 48px; font-weight: 900; text-transform: uppercase; color: var(--accent-orange); }
+        .section-header p { max-width: 600px; color: #888; margin-top: 15px; line-height: 1.6; }
 
-        .logo-icon {
-            color: var(--accent-orange);
-            font-size: 24px;
-            letter-spacing: -2px;
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .btn-outline {
-            border: 2px solid var(--accent-orange);
-            color: var(--accent-orange);
-            background: transparent;
-            padding: 8px 16px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            cursor: pointer;
+        .vac-grid { display: grid; gap: 10px; }
+        .vac-card {
+            background: var(--card-gray); border: 1px solid var(--border-gray);
+            padding: 30px; display: flex; justify-content: space-between; align-items: center;
             transition: 0.3s;
         }
+        .vac-card:hover { border-color: var(--accent-orange); }
+        .vac-card h3 { font-size: 20px; text-transform: uppercase; margin-bottom: 10px; }
+        .vac-card p { color: #777; font-size: 14px; }
+        .details-btn { border: 1px solid var(--accent-orange); color: var(--accent-orange); padding: 10px 25px; text-decoration: none; font-weight: 700; font-size: 12px; }
 
-        .btn-outline:hover {
-            background: var(--accent-orange);
-            color: var(--bg-dark);
+        .faq-container { width: 100%; }
+        .faq-item { border-bottom: 1px solid var(--border-gray); }
+        .faq-trigger {
+            padding: 30px 0; display: flex; justify-content: space-between; 
+            align-items: center; cursor: pointer; text-transform: uppercase; font-weight: 700;
         }
+        .faq-content { max-height: 0; overflow: hidden; transition: 0.5s ease-out; color: #888; line-height: 1.8; }
+        .faq-item.active .faq-content { max-height: 300px; padding-bottom: 30px; }
+        .faq-plus { color: var(--accent-orange); font-size: 24px; }
 
-        .burger {
-            width: 30px;
-            height: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            cursor: pointer;
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 40px; }
+        .step-box { background: var(--card-gray); padding: 30px; border: 1px solid var(--border-gray); position: relative; }
+        .step-num { font-size: 60px; font-weight: 900; color: rgba(240, 140, 0, 0.2); position: absolute; top: 10px; left: 20px; }
+        .step-box h4 { position: relative; z-index: 1; text-transform: uppercase; margin-top: 40px; margin-bottom: 15px; }
+        .step-box p { position: relative; z-index: 1; font-size: 13px; color: #aaa; }
+
+        .form-box { background: var(--card-gray); border: 1px solid var(--border-gray); padding: 50px; margin-top: 40px; }
+        .inputs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        input, select { 
+            background: #0a0a0a; border: 1px solid var(--border-gray); padding: 15px; 
+            color: white; width: 100%; outline: none; font-size: 16px;
         }
+        input:focus { border-color: var(--accent-orange); }
+        .full-col { grid-column: span 2; }
 
-        .burger span {
-            display: block;
-            height: 2px;
-            background-color: var(--text-white);
-        }
-        .burger span:nth-child(2) { width: 70%; float: right; align-self: flex-end; }
-
-        .hero {
-            margin-top: 80px;
-            padding: 40px 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-transform: uppercase;
-        }
-
-        .word-cloud {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            margin-bottom: 40px;
-            width: 100%;
-            max-width: 600px;
-            line-height: 1.1;
-        }
-
-        .w-small { font-size: 12px; color: var(--text-dark-gray); font-weight: 700; }
-        .w-medium { font-size: 16px; color: var(--text-gray); font-weight: 700; }
-        .w-large { font-size: 24px; color: var(--text-white); font-weight: 900; }
-        .w-xl { font-size: 42px; color: var(--accent-orange); font-weight: 900; line-height: 1; margin: 10px 0; }
-
-        .flex-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .btn-main {
-            background-color: var(--accent-orange);
-            color: var(--bg-dark);
-            border: none;
-            padding: 20px 40px;
-            font-size: 20px;
-            font-weight: 900;
-            text-transform: uppercase;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            width: 100%;
-            max-width: 400px;
-            justify-content: center;
-            clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
-            transition: opacity 0.3s;
-        }
-
-        .btn-main:hover {
-            opacity: 0.9;
-        }
-
-        .about-section {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .about-title {
-            color: var(--accent-orange);
-            font-size: 32px;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .about-text {
-            color: var(--text-white);
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        @media (min-width: 768px) {
-            .w-xl { font-size: 64px; }
-            .w-large { font-size: 32px; }
-            .about-title { font-size: 48px; }
-            .btn-main { font-size: 24px; padding: 25px 50px; }
+        @media (max-width: 768px) {
+            .inputs-grid { grid-template-columns: 1fr; }
+            .full-col { grid-column: span 1; }
         }
     </style>
 </head>
 <body>
 
+    <div class="overlay-menu" id="menu">
+        <div class="close-btn" onclick="toggleMenu()">&times;</div>
+        <a href="#" onclick="toggleMenu()">Головна</a>
+        <a href="#about" onclick="toggleMenu()">Про СБУ</a>
+        <a href="#vacancies" onclick="toggleMenu()">Вакансії</a>
+        <a href="#faq" onclick="toggleMenu()">FAQ</a>
+        <a href="#apply" onclick="toggleMenu()">Подати заявку</a>
+    </div>
+
     <header class="header">
-        <a href="#" class="logo">
-            <span class="logo-icon">///</span>
-            <span>Служба Безпеки<br>України</span>
-        </a>
-        <div class="header-actions">
-            <button class="btn-outline">Подати заявку</button>
-            <div class="burger">
-                <span></span>
-                <span></span>
-                <span></span>
+        <a href="#" class="logo"><span>///</span> СЛУЖБА БЕЗПЕКИ<br>УКРАЇНИ</a>
+        <div class="nav-right">
+            <button class="apply-btn-top" onclick="location.href='#apply'">Подати заявку</button>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div><div></div><div></div>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="word-cloud">
-                <div class="flex-row">
-                    <span class="w-small">Сучасне оснащення</span>
-                    <span class="w-small">Новий рівень підготовки</span>
-                </div>
-                <div class="flex-row">
-                    <span class="w-large">КОМАНДИРИ З ОКОПІВ</span>
-                    <span class="w-small">Бережемо життя</span>
-                </div>
-                <div class="flex-row">
-                    <span class="w-small">Своя лікарня</span>
-                    <span class="w-medium">ВЛАСНЕ ППО</span>
-                </div>
-                <div class="flex-row">
-                    <span class="w-large">ПРОФЕСІЙНИЙ РЕЗЕРВ</span>
-                    <span class="w-small">Піклуємось після служби</span>
-                </div>
-                <div class="flex-row">
-                    <span class="w-small">Людяне ставлення</span>
-                    <span class="w-medium">ПОСТІЙНО НАВЧАЄМОСЬ</span>
-                </div>
-                
-                <div class="w-xl">ЗРОБЛЕНО<br>ДЛЯ ТЕБЕ</div>
+    <section class="hero">
+        <div class="word-cloud">КОНТРРОЗВІДКА • ЦЕНТР А • КІБЕРФАХІВЦІ • АНАЛІТИКИ</div>
+        <h1 class="main-title">ЗРОБЛЕНО<br>ДЛЯ ТЕБЕ</h1>
+        <p>Приєднуйся до еліти. Захищай державну безпеку України в Херсонському регіоні.</p>
+        <a href="#apply" class="hero-btn">Подати заявку ↗</a>
+    </section>
 
-                <div class="w-medium">ЦІНУЄМО ЗАСЛУГИ, А НЕ ПОГОНИ</div>
-                <div class="flex-row">
-                    <span class="w-small">Постійно навчаємось</span>
-                    <span class="w-medium">ЛЮДЯНІ КОМАНДИРИ</span>
+    <section id="vacancies">
+        <div class="section-header">
+            <h2>Знайди себе в СБУ</h2>
+            <p>Тут ти можеш розкритися як професіонал та працювати за фахом у лавах спецслужби.</p>
+        </div>
+        <div class="vac-grid">
+            <div class="vac-card">
+                <div>
+                    <h3>Центр «А» (Альфа)</h3>
+                    <p>Силові операції, боротьба з тероризмом та затримання небезпечних злочинців.</p>
                 </div>
-                <div class="flex-row">
-                    <span class="w-large">ВСІХ ЗАБЕЗПЕЧУЄМО</span>
-                    <span class="w-small">Будуємо дороги</span>
-                </div>
-                <div class="flex-row">
-                    <span class="w-small">Бережемо життя</span>
-                    <span class="w-medium">ПІКЛУЄМОСЬ ПІСЛЯ СЛУЖБИ</span>
-                </div>
+                <a href="#" class="details-btn">ДЕТАЛІ</a>
             </div>
+            <div class="vac-card">
+                <div>
+                    <h3>Департамент Контррозвідки</h3>
+                    <p>Пошук ворожих шпигунів, запобігання диверсіям та зраді.</p>
+                </div>
+                <a href="#" class="details-btn">ДЕТАЛІ</a>
+            </div>
+            <div class="vac-card">
+                <div>
+                    <h3>Кіберфахівці</h3>
+                    <p>Захист цифрових кордонів, боротьба з ІПСО та хакерськими атаками ворога.</p>
+                </div>
+                <a href="#" class="details-btn">ДЕТАЛІ</a>
+            </div>
+        </div>
+    </section>
 
-            <button class="btn-main">
-                Подати заявку 
-                <span style="font-weight: 400;">&#8599;</span>
-            </button>
-        </section>
+    <!-- ЕТАПИ ВСТУПУ -->
+    <section id="steps">
+        <div class="section-header">
+            <h2>Етапи вступу</h2>
+        </div>
+        <div class="steps-grid">
+            <div class="step-box">
+                <span class="step-num">01</span>
+                <h4>Заявка</h4>
+                <p>Заповни анкету на сайті. Ми розглянемо її та зв'яжемося з тобою.</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">02</span>
+                <h4>Перевірка</h4>
+                <p>Проходження спецперевірки та психологічного тестування (Детектор брехні).</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">03</span>
+                <h4>Фізо</h4>
+                <p>Здача нормативів з фізичної підготовки для бойових підрозділів.</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">04</span>
+                <h4>Навчання</h4>
+                <p>Інтенсивний курс підготовки в Академії СБУ або навчальному центрі.</p>
+            </div>
+            <div class="step-box">
+                <span class="step-num">05</span>
+                <h4>Служба</h4>
+                <p>Призначення на посаду та початок виконання завдань.</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="about-section">
-            <h2 class="about-title">Про структуру</h2>
-            <p class="about-text">
-                Служба безпеки України — державний правоохоронний орган спеціального призначення, який забезпечує державну безпеку України. Ми формуємо нові підрозділи на базі унікального бойового досвіду.
-            </p>
-            <p class="about-text">
-                За плечима наших співробітників — успішні спецоперації, рекорди на полі бою та щоденна робота заради перемоги.
-            </p>
-        </section>
-    </main>
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="section-header">
+            <h2>Запитання та відповіді</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-trigger" onclick="toggleFaq(this)">Чи обов'язкова вища освіта? <span class="faq-plus">+</span></div>
+                <div class="faq-content">Для офіцерських посад вища освіта обов'язкова. Для сержантського складу достатньо середньої спеціальної освіти.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-trigger" onclick="toggleFaq(this)">Чи можна служити дівчатам? <span class="faq-plus">+</span></div>
+                <div class="faq-content">Так, СБУ відкрита для жінок на рівних правах. У нас є фахівчині в аналітиці, зв'язку, медицині та слідстві.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-trigger" onclick="toggleFaq(this)">Яке грошове забезпечення? <span class="faq-plus">+</span></div>
+                <div class="faq-content">Грошове забезпечення конкурентне та залежить від посади, звання та виконання бойових завдань.</div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ФОРМА -->
+    <section id="apply">
+        <h2 class="section-header" style="color:white; font-size: 60px;">ПРИЄДНУЙСЯ</h2>
+        <div class="form-box">
+            <form id="sbuForm">
+                <div class="inputs-grid">
+                    <input type="text" placeholder="Прізвище*" required>
+                    <input type="text" placeholder="Ім'я*" required>
+                    <input type="text" placeholder="Номер телефону*" required>
+                    <input type="text" placeholder="Нік у Telegram">
+                    <div class="full-col">
+                        <select required>
+                            <option value="" disabled selected>Оберіть напрямок служби</option>
+                            <option>Спецпідрозділ Альфа</option>
+                            <option>Контррозвідка</option>
+                            <option>Кібербезпека</option>
+                            <option>Слідство</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="hero-btn full-col" style="width:100%; border:none; cursor:pointer;">Надіслати анкету ↗</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const plus = element.querySelector('.faq-plus');
+            
+            document.querySelectorAll('.faq-item').forEach(el => {
+                if(el !== item) el.classList.remove('active');
+            });
+
+            item.classList.toggle('active');
+            plus.textContent = item.classList.contains('active') ? '−' : '+';
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
