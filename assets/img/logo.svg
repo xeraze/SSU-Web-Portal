@@ -1,0 +1,6 @@
+<svg width="160" height="40" viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 34L15 6H21L11 34H5Z" fill="#F7931E"/>
+  <path d="M14 34L24 6H30L20 34H14Z" fill="#FFAF36"/>
+  <path d="M23 34L29 18H35L29 34H23Z" fill="#F16522"/>
+  <text x="46" y="27" font-family="Unbounded, sans-serif" font-size="20" font-weight="700" letter-spacing="1" fill="#ffffff">СБУ</text>
+</svg>
