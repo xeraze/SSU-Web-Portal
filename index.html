@@ -5,409 +5,814 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Служба Безпеки України | Набір до лав</title>
     <meta name="description" content="Офіційний портал набору до Служби Безпеки України. Обери свій шлях та долучись до лав СБУ.">
+    <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <canvas id="particles-canvas" class="bg-watermark"></canvas>
-
-    <div class="full-menu" id="fullMenu">
-        <div class="close-menu" id="closeMenu">×</div>
-        <a href="#about" class="menu-link">Про СБУ</a>
-        <a href="#path" class="menu-link">Шляхи служби</a>
-        <a href="#structure" class="menu-link">Структура</a>
-        <a href="#faq" class="menu-link">Запитання</a>
-        <a href="#apply" class="menu-link" style="color: var(--color-orange);">Приєднатися</a>
+<div class="for-mob-menu d-xl-none">
+    <div class="menu-line">
+        <div class="menu-btn">
+            <div class="dash-block">
+                <img src="assets/img/menu-open-new.svg" alt="open">
+            </div>
+            <p>МЕНЮ</p>
+        </div>
+        <div class="for-btn">
+            <div class="btn-inner main-btn">
+                <a class="cl-btn" data-bs-toggle="modal" data-bs-target="#order-modal" href="#order-modal">
+                    <p>ПРИЄДНАТИСЬ</p>
+                </a>
+            </div>
+        </div>
+        <div class="languages-desktop">
+            <div class="languages-widget-block">
+                <div class="wpml-ls-sidebars-languages-widget wpml-ls wpml-ls-legacy-dropdown js-wpml-ls-legacy-dropdown">
+                    <ul>
+                        <li tabindex="0" class="wpml-ls-slot-languages-widget wpml-ls-item wpml-ls-item-uk wpml-ls-current-language wpml-ls-last-item wpml-ls-item-legacy-dropdown">
+                            <a href="#" class="js-wpml-ls-item-toggle wpml-ls-item-toggle">
+                                <img class="wpml-ls-flag" src="assets/img/uk.svg" alt="" width="18" height="12">
+                                <span class="wpml-ls-native">UA</span>
+                            </a>
+                            <ul class="wpml-ls-sub-menu">
+                                <li class="wpml-ls-slot-languages-widget wpml-ls-item wpml-ls-item-en wpml-ls-first-item">
+                                    <a href="#" class="wpml-ls-link">
+                                        <img class="wpml-ls-flag" src="assets/img/en.svg" alt="" width="18" height="12">
+                                        <span class="wpml-ls-display">EN</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <header class="header" id="siteHeader">
-        <a href="#" class="logo">
-            <span class="logo-icon">///</span>
-            <span>Служба Безпеки<br>України</span>
-        </a>
-        <div class="header-actions">
-            <a href="#apply" class="btn-outline">Подати заявку</a>
-            <button class="burger" id="burgerBtn" aria-label="Меню">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
-
-    <main>
-
-        <section class="hero reveal" id="hero">
-            <div class="word-cloud">
-                <div class="flex-row">
-                    <span class="w-small">Сучасне оснащення</span>
-                    <span class="w-small">Новий рівень підготовки</span>
-                </div>
-                <div class="flex-row">
-                    <span class="w-large">ДОСВІД НА ПЕРЕДОВІЙ</span>
-                    <span class="w-small">Бережемо життя</span>
-                </div>
-                <div class="flex-row">
-                    <span class="w-small">Своя система підготовки</span>
-                    <span class="w-medium">ВЛАСНІ ЦЕНТРИ НАВЧАННЯ</span>
-                </div>
-                <div class="flex-row">
-                    <span class="w-large">ПРОФЕСІЙНИЙ РЕЗЕРВ</span>
-                    <span class="w-small">Піклуємось після служби</span>
-                </div>
-                <div class="flex-row">
-                    <span class="w-small">Людяне ставлення</span>
-                    <span class="w-medium">ПОСТІЙНО НАВЧАЄМОСЬ</span>
-                </div>
-
-                <span class="w-xl">ЗРОБЛЕНО<br>ДЛЯ ТЕБЕ</span>
-
-                <div class="w-medium">ЦІНУЄМО ЗАСЛУГИ, А НЕ ПОГОНИ</div>
-                <div class="flex-row">
-                    <span class="w-small">Постійно навчаємось</span>
-                    <span class="w-medium">ЛЮДЯНІ КОМАНДИРИ</span>
-                </div>
-                <div class="flex-row">
-                    <span class="w-large">ВСІХ ЗАБЕЗПЕЧУЄМО</span>
-                    <span class="w-small">Розвиваємо інфраструктуру</span>
-                </div>
-                <div class="flex-row">
-                    <span class="w-small">Бережемо життя</span>
-                    <span class="w-medium">ПІКЛУЄМОСЬ ПІСЛЯ СЛУЖБИ</span>
-                </div>
-            </div>
-
-            <a href="#apply" class="btn-main">
-                Подати заявку
-                <span style="font-weight: 400; font-size: 22px;">&#8599;</span>
+    <div class="mobile-menu">
+        <div class="menu-top">
+            <a href="#" class="logo">
+                <img class="logo-sbu" src="assets/img/logo.svg" alt="СБУ">
             </a>
-        </section>
+            <div class="menu-btn d-flex align-items-center">
+                <p class="fs-16">ЗАКРИТИ</p>
+                <div class="dash-block ms-3">
+                    <img src="assets/img/menu-close.svg" alt="close">
+                </div>
+            </div>
+        </div>
+        <div class="menu-inner">
+            <div class="for-menu"></div>
+        </div>
+        <div class="for-other">
+            <div class="for-btn">
+                <div class="btn-inner main-btn">
+                    <a class="cl-btn" data-bs-toggle="modal" data-bs-target="#order-modal" href="#order-modal">
+                        <p>ПРИЄДНАТИСЬ</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-back"></div>
+</div>
 
-        <section id="about" class="reveal">
-            <h2 class="section-title">Про СБУ</h2>
-            <div class="about-text" style="max-width: 900px;">
-                <p>Служба безпеки України — спецслужба, що поєднує багаторічні традиції контррозвідки з унікальним бойовим досвідом сучасної війни.</p>
-                <p>За плечима наших оперативників та спецпризначенців — надскладні операції в тилу ворога, ліквідація загроз державній безпеці та безпрецедентні морські й повітряні атаки дронів, що змінили правила гри на морі та в небі.</p>
-                <p>Найвищі стандарти контррозвідки та бойової підготовки у власних центрах спецоперацій, де виховують професіоналів нового покоління. Служба, де інтелект, технологічна перевага та рішуче командування діють на випередження.</p>
-            </div>
-            <a href="#structure" class="btn-outline" style="display: inline-block; margin-top: 20px;">Детальніше</a>
-        </section>
+<div class="desktop-menu d-none d-xl-flex">
+    <div class="desktop-toggle-btn">
+        <div class="dash-block">
+            <img src="assets/img/menu-close.svg" alt="close">
+        </div>
+        <p>ЗАКРИТИ</p>
+    </div>
+    <div class="menu-wrapper pc-main-menu">
+        <ul id="header-main-menu" class="menu move-main-menu">
+            <li class="menu-item current-menu-item"><a href="#">Головна</a></li>
+            <li class="menu-item"><a href="#about">Про СБУ</a></li>
+            <li class="menu-item"><a href="#path">Обери свій шлях</a></li>
+            <li class="menu-item"><a href="#structure">Структура</a></li>
+            <li class="menu-item"><a href="#faq">Запитання</a></li>
+            <li class="menu-item"><a href="#steps">Етапи вступу</a></li>
+            <li class="menu-item"><a href="#apply">Анкета</a></li>
+            <li class="menu-item"><a href="#contacts">Контакти</a></li>
+        </ul>
+    </div>
+</div>
 
-        <section id="path" class="reveal">
-            <h2 class="section-title">Обирай свій шлях</h2>
-            <div class="grid-3">
-                <div class="card framed reveal delay-1">
-                    <div class="frame-part ft-lt"></div>
-                    <div class="frame-part ft-rb"></div>
-                    <h3>Прагну діяти</h3>
-                    <p>Стань частиною спецпідрозділів: бери участь в операціях, працюй у складі оперативних груп, протидій ворожому впливу та проводь затримання небезпечних злочинців.</p>
-                    <a href="#structure" class="btn-outline">Бойові та оперативні посади</a>
-                </div>
-                <div class="card framed reveal delay-2">
-                    <div class="frame-part ft-lt"></div>
-                    <div class="frame-part ft-rb"></div>
-                    <h3>Маю фахову спеціалізацію</h3>
-                    <p>Використовуй свій інтелект та професійні навички: у сферах кібербезпеки, аналітики, зв'язку, медицини чи інженерії — там, де технології та досвід вирішують долю операцій.</p>
-                    <a href="#structure" class="btn-outline">Спеціалізовані та забезпечувальні</a>
-                </div>
-                <div class="card framed reveal delay-3">
-                    <div class="frame-part ft-lt"></div>
-                    <div class="frame-part ft-rb"></div>
-                    <h3>Хочу стати професіоналом</h3>
-                    <p>Здобудь фахову освіту та пройди підготовку за стандартами найкращих спецслужб світу — від навчання курсантів до спецкурсів у тренувальних центрах.</p>
-                    <a href="#apply" class="btn-outline">Навчання та підготовка</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="reveal">
-            <h2 class="section-title">Знайди себе в СБУ</h2>
-            <div class="about-text" style="max-width: 900px; margin-bottom: 40px;">
-                <p>Служба безпеки України — місце, де твій досвід стає зброєю, а фах визначає перемогу.</p>
-                <p>Тут ти можеш реалізуватися як оперативник, технічний спеціаліст або аналітик. Обирай свій шлях у команді, що працює на межі можливостей у бойових, цифрових та інтелектуальних операціях.</p>
-            </div>
-
-            <div class="list-grid">
-                <div class="list-item">
-                    <h4>Переведення та повернення</h4>
-                    <p>Для діючих військовослужбовців та фахівців, які прагнуть долучитися до лав спецслужби.</p>
-                    <a href="#apply" class="link-orange">[Деталі]</a>
-                </div>
-                <div class="list-item">
-                    <h4>Оперативні бойові підрозділи</h4>
-                    <p>Спецпідрозділи для проведення силових операцій, оперативних заходів та бойових місій на передовій.</p>
-                    <a href="#apply" class="link-orange">[Деталі]</a>
-                </div>
-                <div class="list-item">
-                    <h4>Морські та повітряні дрони</h4>
-                    <p>Технологічна першість: оператори ударних морських та повітряних БПЛА, що нищать ворога на відстані.</p>
-                    <a href="#apply" class="link-orange">[Деталі]</a>
-                </div>
-                <div class="list-item">
-                    <h4>Кібербезпека</h4>
-                    <p>Війна у цифровому просторі: відбиття хакерських атак, захист інфраструктури та операції в мережах ворога.</p>
-                    <a href="#apply" class="link-orange">[Деталі]</a>
-                </div>
-                <div class="list-item">
-                    <h4>Контррозвідка</h4>
-                    <p>Виявлення агентів, боротьба з колаборантами та захист державної таємниці за найвищими стандартами.</p>
-                    <a href="#apply" class="link-orange">[Деталі]</a>
-                </div>
-                <div class="list-item">
-                    <h4>Технічна розвідка та РЕБ</h4>
-                    <p>Робота з високотехнологічним обладнанням, перехоплення даних та радіоелектронне придушення.</p>
-                    <a href="#apply" class="link-orange">[Деталі]</a>
-                </div>
-                <div class="list-item">
-                    <h4>Медична служба</h4>
-                    <p>Забезпечення здоров'я спецпризначенців: робота за протоколами тактичної медицини та стабілізаційні пункти.</p>
-                    <a href="#apply" class="link-orange">[Деталі]</a>
-                </div>
-                <div class="list-item">
-                    <h4>Логістика та забезпечення</h4>
-                    <p>Тилова підтримка: від обслуговування спецтранспорту до інженерів та зв'язківців.</p>
-                    <a href="#apply" class="link-orange">[Деталі]</a>
-                </div>
-                <div class="list-item">
-                    <h4>Аналітика та право</h4>
-                    <p>Робота з великими даними, юридичний супровід операцій та стратегічне планування безпеки.</p>
-                    <a href="#apply" class="link-orange">[Деталі]</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="structure" class="reveal">
-            <h2 class="section-title">Структура та підрозділи Служби</h2>
-            <div class="list-grid">
-                <div class="list-item">
-                    <h4>Центр спеціальних операцій</h4>
-                    <p>Елітний спецпідрозділ для проведення найскладніших силових операцій та бойових місій на передовій.</p>
-                </div>
-                <div class="list-item">
-                    <h4>Головне слідче управління</h4>
-                    <p>Найвищий рівень розслідувань: збір доказів воєнних злочинів, документування державної зради та справи національної ваги.</p>
-                </div>
-                <div class="list-item">
-                    <h4>Департамент захисту національної державності</h4>
-                    <p>Захист конституційного ладу, боротьба з сепаратизмом та протидія загрозам територіальній цілісності України.</p>
-                </div>
-                <div class="list-item">
-                    <h4>Антитерористичний центр</h4>
-                    <p>Координаційний орган, що відповідає за планування та проведення антитерористичних операцій.</p>
-                </div>
-                <div class="list-item">
-                    <h4>Головне управління внутрішньої безпеки</h4>
-                    <p>Орган самоочищення Служби: запобігання корупції та забезпечення бездоганної репутації співробітників.</p>
-                </div>
-                <div class="list-item">
-                    <h4>Департамент військової контррозвідки</h4>
-                    <p>Ті, хто очищує лави Сил оборони від ворожих агентів та забезпечує безпеку на лінії фронту.</p>
-                </div>
-                <div class="list-item">
-                    <h4>Департамент кібербезпеки</h4>
-                    <p>Цифровий фронт: відбиття хакерських атак, проведення кібероперацій та захист критичної інфраструктури.</p>
-                </div>
-                <div class="list-item">
-                    <h4>Центр безпілотних систем</h4>
-                    <p>Підрозділи-розробники та оператори морських і повітряних ударних БПЛА.</p>
-                </div>
-                <div class="list-item">
-                    <h4>Навчальний центр підготовки</h4>
-                    <p>Головна кузня кадрів, де готують офіцерів спецслужби нового покоління за найвищими стандартами.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="reveal">
-            <h2 class="section-title">Запитання та відповіді</h2>
-            <div class="about-text" style="margin-bottom: 20px;">
-                <p>Тут ви знайдете чіткі відповіді на найпопулярніші запитання: від проходження спецперевірки та критеріїв відбору до особливостей проходження служби в лавах спецслужби.</p>
-            </div>
-
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-header">Чи означає подача анкети автоматичне зарахування до Служби? <span class="faq-icon">+</span></div>
-                    <div class="faq-content">Ні. Подача заявки — це лише перший етап. Після цього кандидати проходять професійний відбір, психологічне тестування, ВЛК та обов'язкову спеціальну перевірку.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-header">Чи можна перевестися до СБУ з інших родів військ? <span class="faq-icon">+</span></div>
-                    <div class="faq-content">Так, переведення можливе. Процедура залежить від вашої поточної посади, звання та результатів співбесіди з профільним підрозділом СБУ.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-header">Яка різниця між службою за контрактом та за призовом? <span class="faq-icon">+</span></div>
-                    <div class="faq-content">В СБУ можливі обидва варіанти, проте пріоритет надається довгостроковому контракту, який відкриває ширші можливості для кар'єрного зростання та профільного навчання.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-header">Чи обов'язково проходити поліграф («детектор брехні»)? <span class="faq-icon">+</span></div>
-                    <div class="faq-content">Так. Спеціальне психофізіологічне дослідження із застосуванням поліграфа є обов'язковим етапом для всіх кандидатів на службу в СБУ.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-header">Чи приймає СБУ кандидатів із судимістю? <span class="faq-icon">+</span></div>
-                    <div class="faq-content">Ні. Наявність судимості (навіть погашеної) або фактів притягнення до кримінальної відповідальності є критичною перепоною для проходження служби в органах безпеки.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-header">Яке грошове забезпечення отримують співробітники СБУ? <span class="faq-icon">+</span></div>
-                    <div class="faq-content">Бійці та співробітники отримують гідне грошове забезпечення, що включає посадовий оклад, надбавки за вислугу років, особливості служби та додаткові виплати за участь у бойових діях.</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="reveal">
-            <h2 class="section-title">Етапи вступу</h2>
-            <div style="margin-bottom: 40px;">
-                <a href="#apply" class="btn-outline">Стати до лав СБУ</a>
-            </div>
-
-            <div class="step-item">
-                <div class="step-num">01</div>
-                <div class="step-text">
-                    <h4>Анкетування</h4>
-                    <p>Залишай заявку на сайті. Ми проведемо попереднє інтерв'ю, щоб зрозуміти твої прагнення та підібрати напрямок, де твої здібності будуть максимально ефективними.</p>
-                </div>
-            </div>
-            <div class="step-item">
-                <div class="step-num">02</div>
-                <div class="step-text">
-                    <h4>Професійний відбір</h4>
-                    <p>Етап тестування твоїх навичок: від інтелектуальних здібностей та психологічної стійкості до фізичної підготовки для бойових підрозділів.</p>
-                </div>
-            </div>
-            <div class="step-item">
-                <div class="step-num">03</div>
-                <div class="step-text">
-                    <h4>Спеціальна перевірка</h4>
-                    <p>Критичний етап для кожного майбутнього співробітника. Проходження поліграфа та ретельна перевірка біографії.</p>
-                </div>
-            </div>
-            <div class="step-item">
-                <div class="step-num">04</div>
-                <div class="step-text">
-                    <h4>Фахова підготовка</h4>
-                    <p>Після зарахування ти проходиш інтенсивний курс у навчальному центрі. Ти опануєш специфіку своєї посади — від оперативної майстерності до тактичної медицини.</p>
-                </div>
-            </div>
-            <div class="step-item">
-                <div class="step-num">05</div>
-                <div class="step-text">
-                    <h4>Реалізація та зростання</h4>
-                    <p>Вітаємо в команді! З цього моменту ти на захисті національної безпеки. Попереду — участь у реальних операціях та кар'єрний шлях у спецслужбі країни.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="apply" class="reveal">
-            <h2 class="section-title">Приєднуйся</h2>
-            <div class="form-wrapper framed">
-                <div class="frame-part ft-lt"></div>
-                <div class="frame-part ft-rt"></div>
-                <div class="frame-part ft-lb"></div>
-                <div class="frame-part ft-rb"></div>
-
-                <form class="form-grid" id="applicationForm" novalidate>
-                    <div>
-                        <label class="field-label">Прізвище <span class="req">*</span></label>
-                        <input type="text" class="input-field" id="f-lastname" placeholder="Прізвище">
-                        <p class="field-error-msg" data-for="f-lastname">Обов'язкове поле.</p>
+<header class="header d-none d-xl-block">
+    <div class="container">
+        <div class="row align-items-center gx-0">
+            <div class="col-xl-4 menu-btn-wrapper">
+                <div class="desktop-toggle-btn">
+                    <div class="dash-block">
+                        <img src="assets/img/menu-open-new.svg" alt="open">
                     </div>
-                    <div>
-                        <label class="field-label">Ім'я <span class="req">*</span></label>
-                        <input type="text" class="input-field" id="f-firstname" placeholder="Ім'я">
-                        <p class="field-error-msg" data-for="f-firstname">Обов'язкове поле.</p>
+                    <p>МЕНЮ</p>
+                </div>
+            </div>
+            <div class="col-xl-4 logo-wrapper">
+                <a href="#" class="logo">
+                    <img class="logo-sbu" src="assets/img/logo.svg" alt="СБУ">
+                </a>
+            </div>
+            <div class="col-xl-4 d-flex align-items-center justify-content-end controls-wrapper">
+                <div class="for-btn me-xl-4">
+                    <div class="btn-inner white-bd-btn">
+                        <a class="cl-btn" data-bs-toggle="modal" data-bs-target="#order-modal" href="#order-modal">
+                            <p>подати заявку</p>
+                        </a>
                     </div>
-                    <div>
-                        <label class="field-label">По батькові</label>
-                        <input type="text" class="input-field" id="f-middlename" placeholder="По батькові">
-                    </div>
-                    <div>
-                        <label class="field-label">Номер телефону <span class="req">*</span></label>
-                        <input type="tel" class="input-field" id="f-phone" placeholder="+38 (0__) ___ __ __">
-                        <p class="field-error-msg" data-for="f-phone">Вкажіть коректний номер телефону.</p>
-                    </div>
-                    <div>
-                        <label class="field-label">Нік в Telegram</label>
-                        <input type="text" class="input-field" id="f-telegram" placeholder="@username">
-                    </div>
-                    <div>
-                        <label class="field-label">Discord Username</label>
-                        <input type="text" class="input-field" id="f-discord" placeholder="username">
-                    </div>
-
-                    <div class="col-full">
-                        <p class="field-label" style="margin-bottom: 12px;">Чи є військовослужбовцем на даний момент? <span class="req">*</span></p>
-                        <div class="radio-group">
-                            <label class="radio-label">
-                                <input type="radio" name="military" value="Так" id="military-1"> Так
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="military" value="Ні" id="military-2"> Ні
-                            </label>
+                </div>
+                <div class="languages-desktop">
+                    <div class="languages-widget-block">
+                        <div class="wpml-ls-sidebars-languages-widget wpml-ls wpml-ls-legacy-dropdown js-wpml-ls-legacy-dropdown">
+                            <ul>
+                                <li tabindex="0" class="wpml-ls-slot-languages-widget wpml-ls-item wpml-ls-item-uk wpml-ls-current-language wpml-ls-last-item wpml-ls-item-legacy-dropdown">
+                                    <a href="#" class="js-wpml-ls-item-toggle wpml-ls-item-toggle">
+                                        <img class="wpml-ls-flag" src="assets/img/uk.svg" alt="" width="18" height="12">
+                                        <span class="wpml-ls-native">UA</span>
+                                    </a>
+                                    <ul class="wpml-ls-sub-menu">
+                                        <li class="wpml-ls-slot-languages-widget wpml-ls-item wpml-ls-item-en wpml-ls-first-item">
+                                            <a href="#" class="wpml-ls-link">
+                                                <img class="wpml-ls-flag" src="assets/img/en.svg" alt="" width="18" height="12">
+                                                <span class="wpml-ls-display">EN</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
-                        <p class="field-error-msg" data-for="military">Оберіть один із варіантів.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-                    <div class="col-full">
-                        <label class="checkbox-wrapper" id="ageCheckWrap">
-                            <input type="checkbox" id="f-age">
-                            <div class="checkmark"></div>
-                            <span class="checkbox-text">Мені від 18 до 58 років <span class="req">*</span></span>
-                        </label>
-                        <p class="field-error-msg" data-for="f-age">Служба доступна для осіб від 18 до 58 років.</p>
+<main id="smooth-wrapper">
+    <div class="page-content" id="smooth-content">
+
+        <section class="front-main-banner-find-slider">
+            <div class="slider">
+                <div class="swiper-container swiper-find-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide hero-slide">
+                            <picture class="banner">
+                                <img src="assets/img/wr-1-new.webp" alt="СБУ" loading="eager">
+                            </picture>
+                            <div class="hero-overlay">
+                                <div class="container">
+                                    <div class="hero-brand-badge">
+                                        <img src="assets/img/logo-mark.svg" alt="">
+                                        <span>Служба безпеки України</span>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <h1 class="hero-title">Ми<br>тут щоб<br>захищати</h1>
+                                    <div class="for-btn hero-cta-row">
+                                        <div class="btn-inner dark-bd-btn">
+                                            <div class="btn-bg-layer"></div>
+                                            <a class="cl-btn" href="#about">
+                                                <p>детальніше</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide hero-slide">
+                            <picture class="banner">
+                                <img src="assets/img/wr-2-new.webp" alt="СБУ" loading="lazy">
+                            </picture>
+                            <div class="hero-overlay">
+                                <div class="container">
+                                    <div class="hero-brand-badge">
+                                        <img src="assets/img/logo-mark.svg" alt="">
+                                        <span>Служба безпеки України</span>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <h1 class="hero-title">Зроблено<br>для тебе</h1>
+                                    <div class="for-btn hero-cta-row">
+                                        <div class="btn-inner dark-bd-btn">
+                                            <div class="btn-bg-layer"></div>
+                                            <a class="cl-btn" data-bs-toggle="modal" data-bs-target="#order-modal" href="#order-modal">
+                                                <p>подати заявку</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="swiper-pagination find-slider-pagination circle-pagination"></div>
+            </div>
+        </section>
 
-                    <div class="col-full">
-                        <label class="checkbox-wrapper" id="agreeCheckWrap">
-                            <input type="checkbox" id="f-agree">
-                            <div class="checkmark"></div>
-                            <span class="checkbox-text">Натискаючи кнопку нижче, ви погоджуєтесь з <a href="#" id="privacyLink">Політикою конфіденційності</a></span>
-                        </label>
-                        <p class="field-error-msg" data-for="f-agree">Потрібна згода з Політикою конфіденційності.</p>
+        <section class="front-recruit-inner wow fadeInUp" data-wow-duration="2s" id="contacts">
+            <div class="container">
+                <div class="recruit-line">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-xl-5">
+                            <div class="contacts-text">
+                                <div class="for-title">
+                                    <div class="sub-title">ми розпочали набір до лав СБУ</div>
+                                    <p class="txt">з можливістю переведення військовослужбовців з інших частин та структур</p>
+                                </div>
+                                <div class="btn-inner blue-bd-btn pulse-btn">
+                                    <a class="cl-btn" href="#order-modal" data-bs-toggle="modal" data-bs-target="#order-modal">
+                                        подати заявку
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-7">
+                            <div class="recruit-block bd-block">
+                                <div class="frame-part ft-lt"></div>
+                                <div class="frame-part ft-rb"></div>
+                                <div class="sub-title">контакти <br> рекрутингових центрів</div>
+                                <div class="recruit-row">
+                                    <div class="row gy-4">
+                                        <div class="col-12 col-md-6">
+                                            <div class="r-block">
+                                                <div class="city">КИЇВ</div>
+                                                <div class="r-info">
+                                                    <div class="address">Центральний рекрутинговий пункт</div>
+                                                    <div class="wordtime">Щодня з 09:00 до 19:00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="r-block">
+                                                <div class="city">ЛЬВІВ</div>
+                                                <div class="r-info">
+                                                    <div class="address">Західний рекрутинговий пункт</div>
+                                                    <div class="wordtime">Щодня з 09:00 до 19:00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="r-block">
+                                                <div class="city">ДНІПРО</div>
+                                                <div class="r-info">
+                                                    <div class="address">Східний рекрутинговий пункт</div>
+                                                    <div class="wordtime">Щодня з 09:00 до 19:00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="r-block">
+                                                <div class="city">ОДЕСА</div>
+                                                <div class="r-info">
+                                                    <div class="address">Південний рекрутинговий пункт</div>
+                                                    <div class="wordtime">Щодня з 09:00 до 19:00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main-contacts">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="main-phone ct-block">
+                                                    <div class="tit">Контакт центр:</div>
+                                                    <a class="link" href="tel:+380800505507">0 800 505 507</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 tg-block">
+                                                <div class="telegram-link ct-block">
+                                                    <div class="tit">Чат-бот Telegram:</div>
+                                                    <a class="color-orange fw-semi link" target="_blank" href="https://t.me/">@sbu_recruit_bot</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="col-full" style="margin-top: 10px;">
-                        <button type="submit" class="btn-main" id="submitBtn" style="width: 100%;">
-                            <span id="submitBtnLabel">Відправити заявку</span>
-                        </button>
-                        <div class="form-status" id="formStatus"></div>
-                    </div>
-                </form>
-
-                <div class="form-success" id="formSuccess">
-                    <div class="icon">✓</div>
-                    <h3>Заявку успішно відправлено</h3>
-                    <p>Дякуємо за звернення. Наш рекрутинговий центр зв'яжеться з вами найближчим часом для наступного етапу відбору.</p>
                 </div>
             </div>
         </section>
-    </main>
 
-    <footer class="footer">
-        <div class="footer-grid">
-            <div style="text-align: left;">
-                <div class="footer-logo">
-                    <span style="color: var(--color-orange);">///</span> СЛУЖБА БЕЗПЕКИ УКРАЇНИ
+        <section class="front-history" id="about">
+            <div class="container">
+                <div class="logo">
+                    <img loading="lazy" src="assets/img/logo-mark.svg" alt="СБУ">
                 </div>
-                <a href="#apply" class="btn-outline">Подати заявку</a>
+                <picture class="pic pic-1">
+                    <img src="assets/img/wr-1-new.webp" alt="" loading="lazy">
+                </picture>
+                <div class="pic pic-2">
+                    <img src="assets/img/wr-2-new.webp" alt="" loading="lazy">
+                </div>
+                <div class="for-title">
+                    <h2 class="title">
+                        <div class="tt-1 wow slideInLeft" data-wow-duration="2s">зроблено</div>
+                        <div class="tt-2 text-end wow slideInRight" data-wow-duration="2s">для</div>
+                        <div class="tt-3 wow slideInLeft" data-wow-duration="2s">тебе</div>
+                    </h2>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="#">Головна</a>
-                <a href="#about">Про Службу</a>
-                <a href="#path">Вакансії</a>
-                <a href="#faq">FAQ</a>
-                <span>Для іноземців</span>
-                <span>Навчання</span>
-                <span>Патронатна служба</span>
-                <span>Благодійний фонд</span>
-                <a href="#">Контакти</a>
-                <span>Блог</span>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>Служба Безпеки України &copy; 2026</span>
-            <div style="display: flex; gap: 20px;">
-                <span>Cookie policy</span>
-                <span>Політика конфіденційності</span>
-            </div>
-        </div>
-    </footer>
+        </section>
 
-    <script src="script.js"></script>
+        <div class="wow fadeInUp" data-wow-duration="2s">
+            <section class="test-week" id="path">
+                <div class="container">
+                    <div class="w-row bd-block">
+                        <div class="frame-part ft-lb d-none d-md-block"></div>
+                        <div class="frame-part ft-rt d-none d-md-block"></div>
+                        <div class="frame-part ft-lt d-md-none"></div>
+                        <div class="frame-part ft-rb d-md-none"></div>
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-12 col-lg-5 col-xl-4">
+                                <div class="w-left">
+                                    <div class="for-title">
+                                        <div class="txt-big">Обери свій шлях</div>
+                                        <h2 class="title">Знайди себе в СБУ</h2>
+                                        <p class="txt color-gray-l">Служба, де твій досвід стає зброєю,<br class="d-none d-md-inline"> а фах визначає перемогу.</p>
+                                    </div>
+                                    <div class="for-btn">
+                                        <div class="btn-inner blue-bd-btn">
+                                            <a class="cl-btn" href="#structure">
+                                                <p>Детальніше</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pic">
+                                <img src="assets/img/get-order.webp" alt="">
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="text">
+                                    <p class="color-gray-l">Тут ти можеш реалізуватися як оперативник, технічний спеціаліст або аналітик. Обирай свій шлях у команді, що працює на межі можливостей у бойових, цифрових та інтелектуальних операціях.</p>
+                                    <p class="fw-bold">Подай заявку — і ми підберемо напрямок, де твої здібності будуть максимально ефективними.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="front-values">
+            <div class="container">
+                <h2 class="title">обирай свій шлях</h2>
+                <div class="v-row">
+                    <div class="cloud">
+                        <img class="wow fadeIn" data-wow-duration="3s" src="assets/img/blue-cloud.png" alt="" loading="lazy">
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="v-block wow fadeInUp" data-wow-duration="2s">
+                                <div class="tit">Прагну діяти</div>
+                                <p>Стань частиною спецпідрозділів: операції, оперативні групи, протидія ворожому впливу.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="v-block wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
+                                <div class="tit">Маю фах</div>
+                                <p>Кібербезпека, аналітика, звʼязок, медицина, інженерія — там, де досвід вирішує долю операцій.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="v-block wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+                                <div class="tit">Хочу рости</div>
+                                <p>Фахова освіта та підготовка за стандартами найкращих спецслужб світу.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="v-block wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
+                                <div class="tit">Контррозвідка</div>
+                                <p>Виявлення агентів, боротьба з колаборантами та захист державної таємниці.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="v-block wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
+                                <div class="tit">Безпілотні системи</div>
+                                <p>Оператори ударних морських та повітряних БПЛА на технологічному фронті.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="structure-section" id="structure">
+            <div class="container wow fadeInUp" data-wow-duration="2s">
+                <h2 class="title">Структура та підрозділи</h2>
+                <p class="color-gray-l mb-4" style="max-width:720px;">Служба безпеки України — спецслужба, що поєднує багаторічні традиції контррозвідки з унікальним бойовим досвідом сучасної війни.</p>
+                <div class="structure-list">
+                    <div class="list-item">
+                        <h4>Центр спеціальних операцій</h4>
+                        <p>Елітний спецпідрозділ для проведення найскладніших силових операцій та бойових місій.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>Головне слідче управління</h4>
+                        <p>Розслідування воєнних злочинів, державної зради та справ національної ваги.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>Департамент захисту національної державності</h4>
+                        <p>Захист конституційного ладу та протидія загрозам територіальній цілісності.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>Антитерористичний центр</h4>
+                        <p>Координація планування та проведення антитерористичних операцій.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>Департамент військової контррозвідки</h4>
+                        <p>Очищення лав Сил оборони від ворожих агентів на лінії фронту.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>Департамент кібербезпеки</h4>
+                        <p>Відбиття хакерських атак, кібероперації та захист критичної інфраструктури.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>Центр безпілотних систем</h4>
+                        <p>Підрозділи-розробники та оператори морських і повітряних ударних БПЛА.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>Навчальний центр підготовки</h4>
+                        <p>Підготовка офіцерів спецслужби нового покоління за найвищими стандартами.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="front-faq faq" id="faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 wow fadeInUp" data-wow-duration="2s">
+                        <div class="faq-info">
+                            <div class="logo">
+                                <img src="assets/img/logo-mark.svg" alt="СБУ">
+                            </div>
+                            <div class="for-title">
+                                <h2 class="title">популярні запитання і відповіді</h2>
+                                <p class="txt">Тут чіткі відповіді на найпопулярніші запитання: від спецперевірки до особливостей служби.</p>
+                            </div>
+                            <div class="for-btn d-none d-md-block">
+                                <div class="btn-inner white-bd-btn">
+                                    <a class="cl-btn" href="#apply">
+                                        <p>подати заявку</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 wow fadeInUp" data-wow-duration="2s">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="card">
+                                <button class="btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-1">
+                                    <span class="question">Чи означає подача анкети автоматичне зарахування?</span>
+                                    <span class="icon-wrapper clip-wrapper"><span class="icon clip-block"></span></span>
+                                </button>
+                                <div id="f-1" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        <p>Ні. Подача заявки — лише перший етап. Далі — професійний відбір, психологічне тестування, ВЛК та спеціальна перевірка.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <button class="btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-2">
+                                    <span class="question">Чи можна перевестися до СБУ з інших родів військ?</span>
+                                    <span class="icon-wrapper clip-wrapper"><span class="icon clip-block"></span></span>
+                                </button>
+                                <div id="f-2" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        <p>Так, переведення можливе. Процедура залежить від посади, звання та результатів співбесіди з профільним підрозділом.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <button class="btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-3">
+                                    <span class="question">Чи обовʼязково проходити поліграф?</span>
+                                    <span class="icon-wrapper clip-wrapper"><span class="icon clip-block"></span></span>
+                                </button>
+                                <div id="f-3" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        <p>Так. Спеціальне психофізіологічне дослідження із застосуванням поліграфа є обовʼязковим етапом для всіх кандидатів.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <button class="btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-4">
+                                    <span class="question">Чи приймає СБУ кандидатів із судимістю?</span>
+                                    <span class="icon-wrapper clip-wrapper"><span class="icon clip-block"></span></span>
+                                </button>
+                                <div id="f-4" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        <p>Ні. Наявність судимості (навіть погашеної) або фактів притягнення до кримінальної відповідальності є критичною перепоною.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <button class="btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-5">
+                                    <span class="question">Яке грошове забезпечення отримують співробітники?</span>
+                                    <span class="icon-wrapper clip-wrapper"><span class="icon clip-block"></span></span>
+                                </button>
+                                <div id="f-5" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        <p>Гідне грошове забезпечення: посадовий оклад, надбавки за вислугу, особливості служби та додаткові виплати за участь у бойових діях.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <button class="btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f-6">
+                                    <span class="question">Яка різниця між контрактом і призовом?</span>
+                                    <span class="icon-wrapper clip-wrapper"><span class="icon clip-block"></span></span>
+                                </button>
+                                <div id="f-6" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="card-body">
+                                        <p>Можливі обидва варіанти, проте пріоритет — довгостроковий контракт з ширшими можливостями карʼєри та навчання.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="for-btn d-md-none mt-4">
+                    <div class="btn-inner white-bd-btn">
+                        <a class="cl-btn" href="#apply"><p>подати заявку</p></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="structure-section" id="steps">
+            <div class="container wow fadeInUp" data-wow-duration="2s">
+                <h2 class="title">Етапи вступу</h2>
+                <div class="for-btn mb-5">
+                    <div class="btn-inner white-bd-btn">
+                        <a class="cl-btn" data-bs-toggle="modal" data-bs-target="#order-modal" href="#order-modal">
+                            <p>Стати до лав СБУ</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="structure-list">
+                    <div class="list-item">
+                        <h4>01 — Анкетування</h4>
+                        <p>Залишай заявку на сайті. Ми проведемо попереднє інтервʼю та підберемо напрямок.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>02 — Професійний відбір</h4>
+                        <p>Тестування навичок: інтелект, психологічна стійкість, фізична підготовка для бойових підрозділів.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>03 — Спеціальна перевірка</h4>
+                        <p>Поліграф та ретельна перевірка біографії — критичний етап для кожного кандидата.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>04 — Фахова підготовка</h4>
+                        <p>Інтенсивний курс у навчальному центрі: від оперативної майстерності до тактичної медицини.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>05 — Реалізація та зростання</h4>
+                        <p>Участь у реальних операціях та карʼєрний шлях у спецслужбі країни.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="wow fadeInUp" data-wow-duration="2s">
+            <section class="front-questionary questionary-block" id="apply">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-5">
+                            <div class="content-block">
+                                <div class="for-title">
+                                    <h2 class="title">Заповнюй анкету і долучайся до СБУ</h2>
+                                    <div class="text color-gray-l">
+                                        <p class="txt">Щоб потрапити до лав Служби безпеки України, подай заявку — заповни анкету нижче.</p>
+                                    </div>
+                                </div>
+                                <div class="for-pic">
+                                    <div class="pic">
+                                        <img src="assets/img/questionary-pic.webp" alt="">
+                                    </div>
+                                    <div class="logo">
+                                        <img src="assets/img/logo-mark.svg" alt="СБУ">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <form id="applicationForm" method="post" novalidate>
+                                <div class="inputblock">
+                                    <p>Прізвище*</p>
+                                    <input type="text" placeholder="Прізвище" name="name2" id="f-lastname" class="form-control" required>
+                                </div>
+                                <div class="inputblock">
+                                    <p>Імʼя*</p>
+                                    <input type="text" placeholder="Імʼя" name="name" id="f-firstname" class="form-control" required>
+                                </div>
+                                <div class="inputblock">
+                                    <p>По-батькові</p>
+                                    <input type="text" placeholder="По-батькові" name="name3" id="f-middlename" class="form-control">
+                                </div>
+                                <div class="inputblock">
+                                    <p>Номер телефону*</p>
+                                    <input type="tel" placeholder="+38 (0_ _) _ _ _  _ _  _ _" class="form-control mask-phone" id="f-phone" required pattern="[^_]+">
+                                    <input type="hidden" name="phone">
+                                </div>
+                                <div class="inputblock">
+                                    <p>Нік в телеграмі</p>
+                                    <input type="text" placeholder="Нік в телеграмі" name="tg" id="f-telegram" class="form-control">
+                                </div>
+                                <div class="inputblock">
+                                    <p>Discord Username</p>
+                                    <input type="text" placeholder="username" name="discord" id="f-discord" class="form-control">
+                                </div>
+                                <div class="inputblock">
+                                    <p class="mb-3">Чи є військовослужбовцем на даний момент?*</p>
+                                    <div class="radio-checks">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" value="Так" name="military" id="military-1" required>
+                                            <label class="form-check-label" for="military-1">Так</label>
+                                        </div>
+                                        <div class="form-check mt-3">
+                                            <input class="form-check-input" type="radio" value="Ні" name="military" id="military-2" required>
+                                            <label class="form-check-label" for="military-2">Ні</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check mt-2 flex-wrap">
+                                    <input class="form-check-input" type="checkbox" name="age_18" id="f-age" required>
+                                    <label class="form-check-label" for="f-age">Мені від 18 до 58 років</label>
+                                    <div class="invalid-feedback mt-2">Служба доступна для осіб від 18 до 58 років.</div>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" id="f-agree" required checked>
+                                    <label class="form-check-label" for="f-agree">
+                                        Натискаючи кнопку нижче ви погоджуєтесь з нашою
+                                        <a class="link" href="#">Політикою конфіденційності</a>
+                                    </label>
+                                </div>
+                                <div class="for-btn">
+                                    <div class="btn-inner w-100 white-bd-btn send-form">
+                                        <button type="submit" class="cl-btn w-100" id="submitBtn">
+                                            <span id="submitBtnLabel">відправити заявку</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-status-msg" id="formStatus"></div>
+                                <input name="lang" type="hidden" value="uk">
+                                <input name="sitename" type="hidden" value="ssu-portal">
+                            </form>
+                            <div class="form-success-panel" id="formSuccess">
+                                <div class="icon">✓</div>
+                                <h3>Заявку успішно відправлено</h3>
+                                <p class="color-gray-l">Дякуємо за звернення. Рекрутинговий центр звʼяжеться з вами найближчим часом.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row main-row justify-content-between align-items-center">
+                    <div class="col-auto">
+                        <a href="#" class="logo">
+                            <img class="logo-sbu" src="assets/img/logo.svg" alt="СБУ">
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-md-block">
+                        <div class="menu-wrapper">
+                            <ul id="footer-main-menu" class="menu">
+                                <li class="menu-item"><a href="#">Головна</a></li>
+                                <li class="menu-item"><a href="#about">Про СБУ</a></li>
+                                <li class="menu-item"><a href="#path">Вакансії</a></li>
+                                <li class="menu-item"><a href="#faq">FAQ</a></li>
+                                <li class="menu-item"><a href="#contacts">Контакти</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="for-btn">
+                            <div class="btn-inner white-bd-btn">
+                                <a class="cl-btn" data-bs-toggle="modal" data-bs-target="#order-modal" href="#order-modal">
+                                    <p>подати заявку</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-contacts mt-4">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-6">
+                            <div class="socials d-flex gap-2">
+                                <a href="#" aria-label="Facebook"><img src="assets/img/Frame-53.svg" alt="" width="48" height="48"></a>
+                                <a href="#" aria-label="Telegram"><img src="assets/img/Frame-54.svg" alt="" width="48" height="48"></a>
+                                <a href="#" aria-label="YouTube"><img src="assets/img/Frame-55.svg" alt="" width="48" height="48"></a>
+                                <a href="#" aria-label="Instagram"><img src="assets/img/Frame-56.svg" alt="" width="48" height="48"></a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 text-md-end mt-3 mt-md-0">
+                            <span class="color-gray-l">Служба Безпеки України © 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</main>
+
+<div class="modal fade order-success" id="order-success" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center p-5">
+                <button type="button" class="btn-close btn-close-white ms-auto d-block" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h2 class="title mb-3">Дякуємо!</h2>
+                <p class="color-gray-l">Вашу заявку успішно відправлено. Ми звʼяжемося з вами найближчим часом.</p>
+                <div class="for-btn mt-4 d-inline-block">
+                    <div class="btn-inner white-bd-btn">
+                        <a class="cl-btn" href="#" data-bs-dismiss="modal"><p>на головну</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade order-modal" id="order-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body p-4 p-md-5">
+                <button type="button" class="btn-close btn-close-white ms-auto d-block mb-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h2 class="title mb-4">Анкетне опитування</h2>
+                <form id="modalApplicationForm" method="post" novalidate>
+                    <div class="inputblock">
+                        <p>Прізвище*</p>
+                        <input type="text" placeholder="Прізвище" name="name2" class="form-control f-lastname" required>
+                    </div>
+                    <div class="inputblock">
+                        <p>Імʼя*</p>
+                        <input type="text" placeholder="Імʼя" name="name" class="form-control f-firstname" required>
+                    </div>
+                    <div class="inputblock">
+                        <p>По-батькові</p>
+                        <input type="text" placeholder="По-батькові" name="name3" class="form-control f-middlename">
+                    </div>
+                    <div class="inputblock">
+                        <p>Номер телефону*</p>
+                        <input type="tel" placeholder="+38 (0_ _) _ _ _  _ _  _ _" class="form-control mask-phone f-phone" required pattern="[^_]+">
+                        <input type="hidden" name="phone">
+                    </div>
+                    <div class="inputblock">
+                        <p>Нік в телеграмі</p>
+                        <input type="text" placeholder="Нік в телеграмі" name="tg" class="form-control f-telegram">
+                    </div>
+                    <div class="inputblock">
+                        <p>Discord Username</p>
+                        <input type="text" placeholder="username" name="discord" class="form-control f-discord">
+                    </div>
+                    <div class="inputblock">
+                        <p class="mb-3">Чи є військовослужбовцем на даний момент?*</p>
+                        <div class="radio-checks">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="Так" name="military-m" id="military-m-1" required>
+                                <label class="form-check-label" for="military-m-1">Так</label>
+                            </div>
+                            <div class="form-check mt-3">
+                                <input class="form-check-input" type="radio" value="Ні" name="military-m" id="military-m-2" required>
+                                <label class="form-check-label" for="military-m-2">Ні</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="checkbox" id="f-age-m" required>
+                        <label class="form-check-label" for="f-age-m">Мені від 18 до 58 років</label>
+                    </div>
+                    <div class="form-check mt-2">
+                        <input class="form-check-input" type="checkbox" id="f-agree-m" required checked>
+                        <label class="form-check-label" for="f-agree-m">Погоджуюсь з Політикою конфіденційності</label>
+                    </div>
+                    <div class="for-btn mt-3">
+                        <div class="btn-inner w-100 white-bd-btn send-form">
+                            <button type="submit" class="cl-btn w-100">
+                                <span>відправити заявку</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-status-msg" id="modalFormStatus"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/vendor/jquery-3.6.min.js"></script>
+<script src="assets/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/swiper.min.js"></script>
+<script src="assets/vendor/wow.min.js"></script>
+<script src="assets/vendor/jquery.inputmask.bundle.js"></script>
+<script src="assets/vendor/gsap.js"></script>
+<script src="assets/vendor/ScrollTrigger.js"></script>
+<script src="assets/vendor/ScrollSmoother.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
