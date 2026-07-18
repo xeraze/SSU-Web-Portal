@@ -1,13 +1,5 @@
-/* ==========================================================================
-   SSU Web Portal — Script
-   ========================================================================== */
-
-// !!! Замени на реальный адрес твоего Cloudflare Worker для этой анкеты !!!
 const WEBHOOK_PROXY_URL = "https://xdevs-application-webhook.xeraze-official.workers.dev";
 
-/* ==========================================================================
-   Burger / fullscreen menu
-   ========================================================================== */
 const burgerBtn = document.getElementById('burgerBtn');
 const fullMenu = document.getElementById('fullMenu');
 const closeMenuBtn = document.getElementById('closeMenu');
@@ -25,9 +17,6 @@ document.querySelectorAll('.menu-link').forEach(link => {
     });
 });
 
-/* ==========================================================================
-   Header hide-on-scroll-down
-   ========================================================================== */
 const header = document.getElementById('siteHeader');
 let lastScrollY = window.scrollY;
 
@@ -41,9 +30,6 @@ window.addEventListener('scroll', () => {
     lastScrollY = currentY;
 }, { passive: true });
 
-/* ==========================================================================
-   Reveal-on-scroll (WOW.js-style, vanilla implementation)
-   ========================================================================== */
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -54,9 +40,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-/* ==========================================================================
-   FAQ accordion
-   ========================================================================== */
 document.querySelectorAll('.faq-header').forEach(header => {
     header.addEventListener('click', () => {
         const item = header.parentElement;
@@ -77,9 +60,6 @@ document.querySelectorAll('.faq-header').forEach(header => {
     });
 });
 
-/* ==========================================================================
-   Ambient particles background (subtle, consistent with dark theme)
-   ========================================================================== */
 const canvas = document.getElementById('particles-canvas');
 const ctx = canvas.getContext('2d');
 let width, height, particles;
@@ -128,9 +108,6 @@ function animateParticles() {
 }
 animateParticles();
 
-/* ==========================================================================
-   Phone input mask (simple, dependency-free)
-   ========================================================================== */
 const phoneInput = document.getElementById('f-phone');
 phoneInput.addEventListener('input', () => {
     let digits = phoneInput.value.replace(/\D/g, '');
@@ -147,9 +124,6 @@ phoneInput.addEventListener('input', () => {
     phoneInput.value = digits.length ? formatted : '';
 });
 
-/* ==========================================================================
-   Custom checkbox toggling (label wraps hidden input + visual box)
-   ========================================================================== */
 function setupCheckbox(wrapId, inputId) {
     const wrap = document.getElementById(wrapId);
     const input = document.getElementById(inputId);
@@ -166,9 +140,6 @@ document.getElementById('privacyLink').addEventListener('click', (e) => {
     e.stopPropagation();
 });
 
-/* ==========================================================================
-   Form validation
-   ========================================================================== */
 const REQUIRED_TEXT_FIELDS = ['f-lastname', 'f-firstname'];
 
 function clearFieldError(id) {
@@ -234,9 +205,6 @@ function validateForm() {
     return valid;
 }
 
-/* ==========================================================================
-   Submit → Cloudflare Worker → Discord webhook
-   ========================================================================== */
 const form = document.getElementById('applicationForm');
 const submitBtn = document.getElementById('submitBtn');
 const submitBtnLabel = document.getElementById('submitBtnLabel');
